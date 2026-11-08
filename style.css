@@ -1,0 +1,338 @@
+
+/* =================================
+   1. GLOBAL SETTINGS
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080d18;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* =================================
+   2. HEADER
+================================= */
+
+header {
+  text-align: center;
+  padding: 35px 15px;
+  background: #0c1525;
+  border-bottom: 1px solid #123e52;
+}
+
+header h1 {
+  color: #00eaff;
+  font-size: 32px;
+  letter-spacing: 5px;
+  text-shadow: 0 0 15px #00eaff;
+}
+
+header p {
+  color: #a4b5c9;
+  margin-top: 12px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+
+/* =================================
+   3. MAIN CONTAINER
+================================= */
+
+main {
+  width: 100%;
+  padding: 35px 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  margin: auto;
+
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+
+/* =================================
+   4. GENERATOR AND CHECKER CARDS
+================================= */
+
+.generator,
+.checker {
+  flex: 1;
+  min-width: 0;
+
+  background: #111b2d;
+  padding: 25px;
+
+  border: 1px solid #087b9b;
+  border-radius: 16px;
+
+  box-shadow: 0 0 15px #00eaff12;
+
+  transition: 0.3s;
+}
+
+.generator:hover,
+.checker:hover {
+  border-color: #00eaff;
+  box-shadow: 0 0 20px #00eaff30;
+}
+
+
+/* =================================
+   5. SECTION HEADINGS
+================================= */
+
+h2 {
+  color: #00eaff;
+  font-size: 21px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+
+/* =================================
+   6. FREQUENCY DISPLAY
+================================= */
+
+.display {
+  background: #080d18;
+  border: 1px solid #087b9b;
+
+  border-radius: 12px;
+  padding: 25px 10px;
+
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.display span {
+  color: #00eaff;
+  font-size: 42px;
+  font-weight: bold;
+  text-shadow: 0 0 12px #00eaff;
+}
+
+.display small {
+  color: #a4b5c9;
+  font-size: 18px;
+}
+
+
+/* =================================
+   7. INPUT FIELDS
+================================= */
+
+input[type="number"] {
+  width: 100%;
+  padding: 13px;
+
+  background: #080d18;
+  color: white;
+
+  border: 1px solid #087b9b;
+  border-radius: 8px;
+
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+input:focus {
+  border-color: #00eaff;
+  box-shadow: 0 0 10px #00eaff50;
+}
+
+
+/* =================================
+   8. RANGE SLIDERS
+================================= */
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #00eaff;
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+
+/* =================================
+   9. BUTTONS
+================================= */
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 13px 10px;
+
+  background: #00d9ef;
+  color: #07101d;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #75f5ff;
+  box-shadow: 0 0 15px #00eaff80;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+
+/* =================================
+   10. STOP BUTTON
+================================= */
+
+#stopBtn,
+#micStop {
+  background: #26364c;
+  color: white;
+}
+
+#stopBtn:hover,
+#micStop:hover {
+  background: #405775;
+}
+
+
+/* =================================
+   11. STATUS TEXT
+================================= */
+
+.card p,
+.generator p,
+.checker p {
+  color: #a4b5c9;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+
+/* =================================
+   12. AUDIO VISUALIZER
+================================= */
+
+#visualizer {
+  display: block;
+  width: 100%;
+  height: 140px;
+
+  background: #080d18;
+  border: 1px solid #087b9b;
+  border-radius: 10px;
+}
+
+
+/* =================================
+   13. FOOTER
+================================= */
+
+footer {
+  text-align: center;
+  padding: 25px;
+
+  color: #66849d;
+  border-top: 1px solid #173044;
+
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+
+/* =================================
+   14. SCROLLBAR
+================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080d18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #087b9b;
+  border-radius: 10px;
+}
+
+
+/* =================================
+   15. MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 650px) {
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .generator,
+  .checker {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+
+  main {
+    padding: 20px 12px;
+  }
+
+  .display span {
+    font-size: 35px;
+  }
+
+  button {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =================================
+   16. SMALL SCREEN ADJUSTMENTS
+================================= */
+
+@media (max-width: 350px) {
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 21px;
+  }
+
+}
