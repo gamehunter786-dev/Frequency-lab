@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequency Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>FREQUENCY LAB</h1>
+  <p>Frequency Generator & Checker</p>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="generator">
+      <h2>Frequency Generator</h2>
+
+      <div class="display">
+        <span id="frequencyDisplay">440</span>
+        <small>Hz</small>
+      </div>
+
+      <input type="number" id="frequencyInput"
+        min="20" max="20000" value="440">
+
+      <input type="range" id="frequencySlider"
+        min="20" max="20000" value="440">
+
+      <label>Volume</label>
+      <input type="range" id="volumeSlider"
+        min="0" max="100" value="10">
+
+      <div class="buttons">
+        <button id="playBtn">Generate</button>
+        <button id="stopBtn">Stop</button>
+      </div>
+
+      <p id="generatorStatus">Generator Ready</p>
+    </div>
+
+    <div class="checker">
+      <h2>Frequency Checker</h2>
+
+      <div class="display">
+        <span id="detectedFrequency">0</span>
+        <small>Hz</small>
+      </div>
+
+      <canvas id="visualizer"></canvas>
+
+      <div class="buttons">
+        <button id="micStart">Start Microphone</button>
+        <button id="micStop">Stop Microphone</button>
+      </div>
+
+      <p id="checkerStatus">Microphone Inactive</p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>FREQUENCY LAB © 2026</p>
+</footer>
+
+</body>
+</html>
